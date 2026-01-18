@@ -1,5 +1,9 @@
 asyncio
 dotenv
 fastapi
+huggingface_hub
+numpy
 openai
+safetensors
+torch
 uvicorn

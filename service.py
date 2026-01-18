@@ -6,6 +6,13 @@ import os
 
 __is_gpu_working__ = False
 
+def process_request(request: ChatCompletionRequest):
+    if check_if_affine_request(request):
+        pass
+    else:
+        completion = call_deepseek_api(request)
+        return completion
+
 def check_if_affine_request(request: ChatCompletionRequest):
     if request.stream: return False
     return True
